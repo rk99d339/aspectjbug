@@ -22,9 +22,9 @@ class AspectMockitoBugApplicationTests {
 
     @Test
     void contextLoads() {
-        when(model.iterator.hasNext()).thenReturn(true);
+        when(model.iterator.hasNext()).thenReturn(true).thenReturn(false);
         when(model.iterator.next()).thenReturn("TEST");
-        
+
         model.doWork();
     }
 
